@@ -56,3 +56,6 @@ Caused by: java.lang.IllegalArgumentException: @ConditionalOnMissingBean annotat
 	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:92) ~[spring-boot-autoconfigure-1.2.3.RELEASE.jar:1.2.3.RELEASE]
 	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:45) ~[spring-boot-autoconfigure-1.2.3.RELEASE.jar:1.2.3.RELEASE]
 ```
+##### Disclaimer
+I slightly modified the tweet-transformer sample processor from here:
+https://github.com/spring-projects/spring-xd-samples/tree/master/tweet-transformer-processor
