@@ -7,7 +7,7 @@ mvn clean package
 Running the module on 1.2.0.RC1 singlenode
 ```xd-shell
 xd:>module upload --file spring-xd-sample/tweet-transformer-processor/target/tweet-transformer-1.0.0.BUILD-SNAPSHOT.jar --name xd-sample-processor --type processor
-xd:>stream create test --definition "twittersearch --query=job | xd-sample-processor | log" --deploy
+xd:>stream create test --definition "twittersearch --query=twitter | xd-sample-processor | log" --deploy
 ```
 Exception:
 ```
