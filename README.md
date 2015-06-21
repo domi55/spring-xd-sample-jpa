@@ -4,7 +4,7 @@ mvn clean package
 ```
 
 ##### Doesn't work
-Running the module on 1.2.0.RE singlenode
+Running the module on 1.2.0.RELEASE singlenode
 ```xd-shell
 mvn clean package -Dmaven.test.skip
 xd:>module upload --file spring-xd-sample/module/target/org.test.xd.module-0.0.1-SNAPSHOT.jar --name xd-sample-processor --type processor
