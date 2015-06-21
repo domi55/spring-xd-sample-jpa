@@ -6,11 +6,12 @@
 
     <groupId>org.test.xd.module</groupId>
     <artifactId>org.test.xd.module</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.xd</groupId>
         <artifactId>spring-xd-module-parent</artifactId>
-        <version>1.2.0.RC1</version>
+        <version>1.2.0.RELEASE</version>
         <relativePath></relativePath>
     </parent>
     <properties>

@@ -6,7 +6,8 @@ mvn clean package
 ##### Doesn't work
 Running the module on 1.2.0.RC1 singlenode
 ```xd-shell
-xd:>module upload --file spring-xd-sample/module/target/org.test.xd.module-1.2.0.RC1.jar --name xd-sample-processor --type processor
+mvn clean package -Dmaven.test.skip
+xd:>module upload --file spring-xd-sample/module/target/org.test.xd.module-0.0.1-SNAPSHOT.jar --name xd-sample-processor --type processor
 xd:>stream create --name ticktock --definition "time | xd-sample-processor | log" --deploy
 ```
 Exception:
