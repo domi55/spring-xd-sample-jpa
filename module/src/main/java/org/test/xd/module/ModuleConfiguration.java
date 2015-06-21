@@ -1,4 +1,4 @@
-package my.custom.transformer;
+package org.test.xd.module;
 
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.orm.jpa.EntityScan;
@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.integration.annotation.Transformer;
 import org.springframework.integration.channel.DirectChannel;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.messaging.MessageChannel;
@@ -29,7 +28,7 @@ public class ModuleConfiguration {
 	}
 
 	@Bean
-	TweetTransformer transformer() {
-		return new TweetTransformer();
+	LeetAppender appender() {
+		return new LeetAppender();
 	}
 }

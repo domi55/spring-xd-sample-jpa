@@ -11,7 +11,7 @@ import javax.persistence.Column;
  */
 @Entity
 @Table(name = "simple_tweet")
-public class SimpleTweet {
+public class Message {
 
     @Id
     @GeneratedValue
@@ -21,15 +21,15 @@ public class SimpleTweet {
     @Column
     private String text;
 
-    private SimpleTweet(){}
+    private Message(){}
 
-    public SimpleTweet(String text){
+    public Message(String text){
         this.text = text;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("SimpleTweet{");
+        final StringBuilder sb = new StringBuilder("Message{");
         sb.append("id=").append(id);
         sb.append(", text='").append(text).append('\'');
         sb.append('}');

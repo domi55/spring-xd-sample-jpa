@@ -6,8 +6,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>tweet-transformer-processor</module>
 		<module>common</module>
+		<module>module</module>
 	</modules>
 
 </project>
