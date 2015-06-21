@@ -3,22 +3,17 @@ package org.test.common;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Column;
 
 /**
  * @author dominik.mengelt@gmail.com
  */
 @Entity
-@Table(name = "simple_tweet")
 public class Message {
 
     @Id
     @GeneratedValue
-    @Column
     private Long id;
 
-    @Column
     private String text;
 
     private Message(){}

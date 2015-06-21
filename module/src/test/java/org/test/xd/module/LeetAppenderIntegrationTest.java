@@ -19,7 +19,7 @@ public class LeetAppenderIntegrationTest {
 
 	private static int RECEIVE_TIMEOUT = 10000;
 
-	private static String moduleName = "timestamp-appender";
+	private static String moduleName = "leet-appender";
 
 	@BeforeClass
 	public static void setUp() {
@@ -33,12 +33,10 @@ public class LeetAppenderIntegrationTest {
 
 	@Test
 	public void test() {
-		String streamName = "appenderTest";
-		String processingChainUnderTest = moduleName;
-		SingleNodeProcessingChain chain = chain(application, streamName, processingChainUnderTest);
+		SingleNodeProcessingChain chain = chain(application, "leetAppenderTest", moduleName);
 		chain.sendPayload("hello");
 		String result = (String) chain.receivePayload(RECEIVE_TIMEOUT);
-		assertThat(result, containsString("_"));
+		assertThat(result, containsString("_1337"));
 		chain.destroy();
 	}
 
