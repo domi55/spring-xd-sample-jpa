@@ -6,8 +6,8 @@ mvn clean package
 ##### Doesn't work
 Running the module on 1.2.0.RC1 singlenode
 ```xd-shell
-xd:>module upload --file spring-xd-sample/tweet-transformer-processor/target/tweet-transformer-1.0.0.BUILD-SNAPSHOT.jar --name xd-sample-processor --type processor
-xd:>stream create test --definition "twittersearch --query=twitter | xd-sample-processor | log" --deploy
+xd:>module upload --file spring-xd-sample/module/target/org.test.xd.module-1.2.0.RC1.jar --name xd-sample-processor --type processor
+xd:>stream create --name ticktock --definition "time | xd-sample-processor | log" --deploy
 ```
 Exception:
 ```
@@ -56,6 +56,3 @@ Caused by: java.lang.IllegalArgumentException: @ConditionalOnMissingBean annotat
 	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:92) ~[spring-boot-autoconfigure-1.2.3.RELEASE.jar:1.2.3.RELEASE]
 	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:45) ~[spring-boot-autoconfigure-1.2.3.RELEASE.jar:1.2.3.RELEASE]
 ```
-##### Disclaimer
-I slightly modified the tweet-transformer sample processor from here:
-https://github.com/spring-projects/spring-xd-samples/tree/master/tweet-transformer-processor
